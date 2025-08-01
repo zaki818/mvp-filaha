@@ -1,7 +1,8 @@
-require('dotenv').config(); // Load environment variables
+import express from 'express';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables
 
-const express = require('express');
-const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -14,7 +15,6 @@ app.post('/api/submit', async (req, res) => {
   console.log("✅ New investment received:");
   console.log({ firstName, lastName, phone, email, amount });
 
-  // Gmail transporter using environment variables
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -23,7 +23,6 @@ app.post('/api/submit', async (req, res) => {
     }
   });
 
-  // Email 1: Confirmation email to user and admin
   const confirmationMail = {
     from: `"Filaha Crowdfunding" <${process.env.EMAIL_USER}>`,
     to: `${email}, ${process.env.EMAIL_USER}`,
@@ -37,7 +36,6 @@ app.post('/api/submit', async (req, res) => {
     `
   };
 
-  // Email 2: Internal admin email (text only)
   const adminMail = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
