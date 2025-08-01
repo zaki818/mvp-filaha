@@ -1,0 +1,26 @@
+{
+  "name": "mvp-filaha",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaki818/mvp-filaha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaki818/mvp-filaha/issues"
+  },
+  "homepage": "https://github.com/zaki818/mvp-filaha#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}
