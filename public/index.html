@@ -5,24 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>filaha</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background-image: url('1000_F_491786013_3XL3z247U2qKjCsIH8TZ8rMxYowVKxsP.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-    }
-
-    /* Optional: Add overlay to improve readability */
-    .overlay {
-      background-color: rgba(255, 255, 255, 0.85); /* change opacity here */
-    }
-  </style>
 </head>
 
-<body class="text-gray-800 font-sans">
-  <div class="overlay">
+<body class="bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-gray-800 font-sans"
+      style="background-image: url('/1000_F_491786013_3XL3z247U2qKjCsIH8TZ8rMxYowVKxsP.jpg');">
+
+  <!-- ✅ White semi-transparent overlay for readability -->
+  <div class="bg-white/85 min-h-screen">
 
     <!-- Header -->
     <header class="bg-white shadow p-4">
