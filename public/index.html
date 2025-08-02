@@ -10,6 +10,11 @@
 <body class="bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-gray-800 font-sans"
       style="background-image: url('/1000_F_491786013_3XL3z247U2qKjCsIH8TZ8rMxYowVKxsP.jpg');">
 
+  <!-- ✅ Loading Screen -->
+  <div id="loading-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center text-xl font-bold text-green-700 transition-opacity duration-500">
+    جاري التحميل...
+  </div>
+
   <!-- ✅ White semi-transparent overlay for readability -->
   <div class="bg-white/50 min-h-screen">
 
@@ -59,5 +64,16 @@
     </footer>
 
   </div>
+
+  <!-- ✅ Hide loading screen after load -->
+  <script>
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loading-screen');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    });
+  </script>
 </body>
 </html>
